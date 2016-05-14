@@ -1,0 +1,36 @@
+{
+  "name": "angular-attack-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/1d20/angular-attack-server.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/1d20/angular-attack-server/issues"
+  },
+  "homepage": "https://github.com/1d20/angular-attack-server#readme",
+  "dependencies": {
+    "body-parser": "^1.15.1",
+    "cookie-parser": "^1.4.1",
+    "dotenv": "^2.0.0",
+    "express": "^4.13.4",
+    "express-restify-mongoose": "^4.0.2",
+    "express-session": "^1.13.0",
+    "method-override": "^2.3.5",
+    "mongoose": "^4.4.17",
+    "morgan": "^1.7.0",
+    "passport": "^0.3.2",
+    "passport-google-oauth20": "^1.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.9.2"
+  }
+}
