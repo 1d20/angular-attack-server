@@ -2,11 +2,15 @@ const passport = require('passport');
 const GoogleStrategy = require('passport-google-oauth20').Strategy;
 const User = require('./../models/user');
 
+const host = process.env.NODE_ENV === 'production'
+    ? 'https://angular-attack-1d20.herokuapp.com'
+    : 'http://localhost:5000';
+
 module.exports = (passport) => {
     passport.use(new GoogleStrategy({
             clientID: process.env.GOOGLE_CLIENT_ID || 'random',
             clientSecret: process.env.GOOGLE_CLIENT_SECRET || 'random',
-            callbackURL: 'http://localhost:5000/auth/google/callback'
+            callbackURL: `${host}/auth/google/callback`
         },
         (accessToken, refreshToken, profile, done) => {
             User.findOne({
