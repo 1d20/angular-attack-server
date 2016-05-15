@@ -18,6 +18,8 @@
   "LOGOUT": "Log out",
   
   "ACTIVITY_ALL": "All",
-  "ACTIVITY_NOTIFICATION": "Notification"
-  
+  "ACTIVITY_NOTIFICATION": "Notification",
+  "ACTIVITY_TRAINING": "Trainings",
+  "ACTIVITY_PHOTO": "Photos",
+  "ACTIVITY_NEWS": "News"
 }

@@ -19,5 +19,8 @@
   "LOGOUT": "Выйти",
   
   "ACTIVITY_ALL": "Все",
-  "ACTIVITY_NOTIFICATION": "Уведомления"
+  "ACTIVITY_NOTIFICATION": "Уведомления",
+  "ACTIVITY_TRAINING": "Тренеровки",
+  "ACTIVITY_PHOTO": "Фотографии",
+  "ACTIVITY_NEWS": "Новости"
 }
