@@ -45,7 +45,7 @@ app.use(express.static(__dirname + '/public'));
 app.use(routes);
 
 app.all('*', (req, res) => {
-    res.send('ok');
+    res.sendFile(require('path').resolve(`${__dirname}/public/index.html`));
 });
 
 app.listen(port, () => {
