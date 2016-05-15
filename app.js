@@ -40,12 +40,22 @@ app.use(bodyParser.urlencoded({extended: true}));
 //app.use(passport.initialize());
 //app.use(passport.session());
 
-app.use(express.static(__dirname + '/public'));
+if (process.env.NODE_ENV === 'production') {
+    app.use(express.static(__dirname + '/public'));
+} else {
+    app.use(express.static(__dirname + '/../../angularattack2016-1D20/dist/dev'));
+    app.use('/dist', express.static(__dirname + '/../../angularattack2016-1D20/dist/dev'));
+    app.use('/node_modules', express.static(__dirname + '/../../angularattack2016-1D20/node_modules'));
+}
 
 app.use(routes);
 
 app.all('*', (req, res) => {
-    res.sendFile(require('path').resolve(`${__dirname}/public/index.html`));
+    if (process.env.NODE_ENV === 'production') {
+        res.sendFile(require('path').resolve(`${__dirname}/public/index.html`));
+    } else {
+        res.sendFile(require('path').resolve(`${__dirname}/../../angularattack2016-1D20/dist/dev/index.html`));
+    }
 });
 
 app.listen(port, () => {
