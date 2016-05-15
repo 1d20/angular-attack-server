@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build": "cp -r ../../angularattack2016-1D20/dist/prod public",
     "start": "nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
